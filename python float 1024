@@ -1,0 +1,14 @@
+import time
+t1=time.time()
+n=1024
+a = [[1.1 for i in range(n)] for j in range(n)]
+b = [[1.1 for i in range(n)] for j in range(n)]
+c = [[0.0 for i in range(n)] for j in range(n)]
+t2=time.time()
+for i in range(n):
+     for j in range(n):
+         for k in range(n):
+            c[i][j] += a[i][k] * b[k][j]
+t3=time.time()
+print(‘Execution time : ’,t3-t2)
+print(‘Total Program Execution time : ’,t3-t1) 
